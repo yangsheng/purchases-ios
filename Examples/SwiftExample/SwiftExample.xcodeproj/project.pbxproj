@@ -14,6 +14,8 @@
 		3493336B21E69360007AAAB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3493336921E69360007AAAB9 /* LaunchScreen.storyboard */; };
 		3493337521E694D6007AAAB9 /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493337421E694D6007AAAB9 /* CatsViewController.swift */; };
 		34D05817233C1A3700343134 /* SwiftPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D05816233C1A3700343134 /* SwiftPaywall.swift */; };
+		35EAED4A23624A7600D418B8 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EAED4923624A7600D418B8 /* AuthenticationServices.framework */; };
+		35EAED4C23624B7600D418B8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EAED4B23624B7600D418B8 /* SignInViewController.swift */; };
 		612312EC8EFEAE0D4472F1D9 /* libPods-SwiftExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D95AC7213243D08744E89F6 /* libPods-SwiftExample.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,9 @@
 		3493336C21E69360007AAAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3493337421E694D6007AAAB9 /* CatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewController.swift; sourceTree = "<group>"; };
 		34D05816233C1A3700343134 /* SwiftPaywall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPaywall.swift; sourceTree = "<group>"; };
+		35EAED4823624A6F00D418B8 /* SwiftExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftExample.entitlements; sourceTree = "<group>"; };
+		35EAED4923624A7600D418B8 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		35EAED4B23624B7600D418B8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4D95AC7213243D08744E89F6 /* libPods-SwiftExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47D44DA0C1FBE5A9FCA7E55 /* Pods-SwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftExample/Pods-SwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EAED4A23624A7600D418B8 /* AuthenticationServices.framework in Frameworks */,
 				612312EC8EFEAE0D4472F1D9 /* libPods-SwiftExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,10 +71,12 @@
 		3493335F21E6935F007AAAB9 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				35EAED4823624A6F00D418B8 /* SwiftExample.entitlements */,
 				3493336021E6935F007AAAB9 /* AppDelegate.swift */,
 				3493336221E6935F007AAAB9 /* InitialViewController.swift */,
 				34D05816233C1A3700343134 /* SwiftPaywall.swift */,
 				3493337421E694D6007AAAB9 /* CatsViewController.swift */,
+				35EAED4B23624B7600D418B8 /* SignInViewController.swift */,
 				3493336421E6935F007AAAB9 /* Main.storyboard */,
 				3493336721E69360007AAAB9 /* Assets.xcassets */,
 				3493336921E69360007AAAB9 /* LaunchScreen.storyboard */,
@@ -89,6 +97,7 @@
 		C40A83F5FB23D02C73486501 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35EAED4923624A7600D418B8 /* AuthenticationServices.framework */,
 				4D95AC7213243D08744E89F6 /* libPods-SwiftExample.a */,
 			);
 			name = Frameworks;
@@ -194,6 +203,7 @@
 				3493336321E6935F007AAAB9 /* InitialViewController.swift in Sources */,
 				3493337521E694D6007AAAB9 /* CatsViewController.swift in Sources */,
 				34D05817233C1A3700343134 /* SwiftPaywall.swift in Sources */,
+				35EAED4C23624B7600D418B8 /* SignInViewController.swift in Sources */,
 				3493336121E6935F007AAAB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +351,9 @@
 			baseConfigurationReference = F47D44DA0C1FBE5A9FCA7E55 /* Pods-SwiftExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftExample/SwiftExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8SXR2327BM;
 				INFOPLIST_FILE = SwiftExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -350,6 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revenuecat.sampleapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,7 +373,9 @@
 			baseConfigurationReference = 164A5AED2A65F70448049504 /* Pods-SwiftExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftExample/SwiftExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8SXR2327BM;
 				INFOPLIST_FILE = SwiftExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,6 +384,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revenuecat.sampleapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
